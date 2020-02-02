@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import NavAfterLog from './NavAfterLog';
 import SS1 from './img/Servingsize1.png';
 import SS2 from './img/Servingsize2.png';
 import SS3 from './img/Servingsize3.png';
@@ -9,8 +10,8 @@ function MealForm(){
 
 
     return(
-
-
+<div>
+        <NavAfterLog />
         <form className="MealFormStyle">
             <input type="date"/>
             <select type="dropdown">
@@ -22,7 +23,7 @@ function MealForm(){
             <input Type="Qty" placeholder="Enter Serving Size"></input>
             <button>Submit</button>
         </form>
-
+        </div>
     )
 }
 
