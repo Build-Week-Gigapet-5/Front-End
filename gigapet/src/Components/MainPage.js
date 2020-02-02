@@ -5,6 +5,7 @@ function MainPage(){
     return(
      <NavAfterLog />
      
+
     )
 }
 

@@ -30,11 +30,10 @@ function Register(){
         <img src={logo} alt="logo" width="300px"/>
     </div>
         <div className="DroppingDown">
-            <DropDown><img className="tooBigAt1700px" src={Steak} alt='Steak'/></DropDown>
-            <DropDown><img className="tooBigAt1500px" src={Lettuce} alt='Lettuce'/></DropDown>
-            <DropDown><img className="tooBigAt1300px" src={Bread} alt='Bread'/></DropDown>
-            <DropDown><img className="tooBigAt1100px" src={Broccoli} alt='Broccoli'/></DropDown>
-            <DropDown><img className="tooBigAt900px" src={Carrot} alt='Carrot'/></DropDown>
+            <DropDown><img className="tooBigAt1700px" src={Steak} alt='Steak' width="100px" postion="absolute"/></DropDown>
+            <DropDown><img className="tooBigAt1500px" src={Carrot} alt='Carrot' width="100px" postion="absolute"/></DropDown>
+            <DropDown><img className="tooBigAt1300px" src={Bread} alt='Bread' width="100px" postion="absolute"/></DropDown>
+            <DropDown><img className="tooBigAt1100px" src={Broccoli} alt='Broccoli' width="100px" postion="absolute"/></DropDown>
         </div>
 <form>
     <div className="RegForm">

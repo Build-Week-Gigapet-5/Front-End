@@ -10,12 +10,11 @@ function NavBeforeLog(){
                     <input type="password" placeholder="Enter password here"/>
                     <button>Login</button>
                     </form>
-            <div className="Login">
                 <Link to="/Register">Register</Link>
                 <Link to="/">Home Page</Link>
                 <Link to="/Gigapet">Giga-Pet</Link>
                 <Link to="/MealForm">Meal Form</Link>
-                </div>
+
             </div>
         </div>
     )
