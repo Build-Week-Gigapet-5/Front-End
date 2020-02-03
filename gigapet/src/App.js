@@ -3,7 +3,7 @@ import Register from './Components/Register';
 import HomePage from './Components/HomePage';
 import MainPage from './Components/MainPage';
 import MealForm from './Components/MealForm';
-import {Route} from 'react-router-dom';
+import { Route } from 'react-router-dom';
 
 import './App.css';
 
