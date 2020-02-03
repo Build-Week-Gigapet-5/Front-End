@@ -3,8 +3,9 @@ import NavAfterLog from './NavAfterLog';
 
 function MainPage(){
     return(
+        <div>
      <NavAfterLog />
-     
+        </div>
 
     )
 }

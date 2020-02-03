@@ -3,7 +3,6 @@ import {slideInDown} from 'react-animations';
 import styled, { keyframes } from 'styled-components';
 import NavBeforeLog from './NavBeforeLog';
 import Steak from './img/Steak.png';
-import Lettuce from './img/Lettuce.png';
 import Bread from './img/Bread.png';
 import Carrot from './img/Carrot.png';
 import Broccoli from './img/Broccoli.png';

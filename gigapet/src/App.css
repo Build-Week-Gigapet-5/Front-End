@@ -82,7 +82,23 @@ a:hover{
 
 .MealFormStyle{
   display:flex;
-  align-items: center;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  flex-direction: column;
+}
+button{
+  margin: 10px 10px 0 10px;
+}
+
+select{
+  margin: 10px 10px 0 10px;
+}
+body{
+  
+  background-image:url("./Components/img/background.png");
+  background-position: cover;
+  background-repeat: no-repeat;
+ 
 }
 
 @media(max-width:700px) {

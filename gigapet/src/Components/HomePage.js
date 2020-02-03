@@ -3,7 +3,7 @@ import NavBeforeLog from './NavBeforeLog';
 
 function HomePage(){
 return(
-    <div>
+    <div className="container">
       <NavBeforeLog />
 
 
