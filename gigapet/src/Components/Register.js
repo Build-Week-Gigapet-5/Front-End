@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {slideInDown} from 'react-animations';
 import styled, { keyframes } from 'styled-components';
 import NavBeforeLog from './NavBeforeLog';
@@ -7,11 +7,41 @@ import Bread from './img/Bread.png';
 import Carrot from './img/Carrot.png';
 import Broccoli from './img/Broccoli.png';
 import logo from './img/logo.png';
-
+import axios from "axios"
 
 function Register(){
+  
+function Register(props){
+
  
     const DropDown = styled.div`animation: 10s ${keyframes `${slideInDown}`} infinite`;
+
+    const [registerCredentials, setRegisterCredentials] = useState({
+        name: '',
+        email: '',
+        password: ''
+    })
+
+    const handleChange = (e) => {
+        setRegisterCredentials({
+            ...registerCredentials,
+            [e.target.name]: e.target.value
+        })
+    }
+
+    const handleSubmit = (e) => {
+      e.preventDefault()
+       
+      
+      axios
+      .post('https://gigapet5.herokuapp.com/auth/register', registerCredentials)
+      .then(res => {
+          console.log(res)
+          props.history.replace('/')
+      })
+      .catch(error => console.log(error))
+    }
+console.log(registerCredentials)
 
     return(
 
@@ -19,6 +49,16 @@ function Register(){
              <div>
         <div className="Login">
         <NavBeforeLog />
+                <form>
+                    <input type="e-mail" placeholder="Enter e-mail here"/>
+                    <input type="password" placeholder="Enter password here"/>
+                    <button>Login</button>
+                </form>
+                <Link to="/Register">Register</Link>
+                <Link to="/">Home Page</Link>
+                <Link to="Gigapet">Giga-Pet</Link>
+                <Link to="/MealForm">Meal Form</Link>
+                <Link to="/ChildForm"> Child Form</Link>
         </div>
 
 
@@ -34,13 +74,15 @@ function Register(){
             <DropDown><img className="tooBigAt1300px" src={Bread} alt='Bread' width="100px" postion="absolute"/></DropDown>
             <DropDown><img className="tooBigAt1100px" src={Broccoli} alt='Broccoli' width="100px" postion="absolute"/></DropDown>
         </div>
-<form>
+<form onSubmit={handleSubmit}>
     <div className="RegForm">
         <div className="FormStyle">
-            <p>Name:</p> <input type="text" placeholder="Enter a name"></input>
-            <p>E-mail:</p> <input type="email" placeholder="Enter your e-mail"></input>
-            <p>Password:</p> <input type="password" placeholder="Enter your password"></input>
+            
+            <p>Name:</p> <input type="text" placeholder="Enter a name" name="name" value={registerCredentials.name} onChange={handleChange} ></input>
+            <p>E-mail:</p> <input type="email" placeholder="Enter your e-mail" name="email" value={registerCredentials.email} onChange={handleChange}></input>
+            <p>Password:</p> <input type="password" placeholder="Enter your password" name="password" value={registerCredentials.password} onChange={handleChange}></input>
             <button className="btn">Submit</button>
+            
         </div>
     </div>
 </form>

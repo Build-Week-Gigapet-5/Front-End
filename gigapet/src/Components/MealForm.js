@@ -1,5 +1,7 @@
+
 import React, { useEffect, useState } from 'react';
 import NavAfterLog from './NavAfterLog';
+import React from 'react';
 
 function MealForm(){
     function formatDate(date) {
