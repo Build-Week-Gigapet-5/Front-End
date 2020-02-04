@@ -32,7 +32,7 @@ function Register(props){
        
       
       axios
-      .post('https://gigapet5.herokuapp.com/auth/register', registerCredentials)
+      .post('https://gigapetfive.herokuapp.com/auth/register', registerCredentials)
       .then(res => {
           console.log(res)
           props.history.replace('/')

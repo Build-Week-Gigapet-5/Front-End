@@ -20,10 +20,12 @@ function HomePage(props) {
         e.preventDefault()
 
         axios
-            .post(`https://gigapet5.herokuapp.com/auth/login`, credentials)
+            .post(`https://gigapetfive.herokuapp.com/auth/login`, credentials)
             .then(res => {
                 localStorage.setItem("token", res.data.token)
-                props.history.push('/');
+                localStorage.setItem("id", res.data.user.id)
+                localStorage.setItem("name", res.data.user.name)
+                props.history.push('/home');
                 console.log("response =", res.data)
             })
             .catch(err => console.log("Error:", err))

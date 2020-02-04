@@ -5,8 +5,10 @@ import MainPage from './Components/MainPage';
 import MealForm from './Components/MealForm';
 import { Route } from 'react-router-dom';
 import ChildForm from './Components/ChildForms';
+import AfterLoggedIn from "./Components/AfterLoggedIn"
 
 import './App.css';
+import ProtectedRoute from './Components/ProtectedRoute';
 
 function App() {
   return (
@@ -16,6 +18,7 @@ function App() {
     <Route exact path="/Gigapet" component={MainPage} />
     <Route exact path="/MealForm" component={MealForm} />
     <Route exact path="/ChildForm" component={ChildForm} />
+    <ProtectedRoute path="/home" component={AfterLoggedIn} />
     </div>
   );
 }
