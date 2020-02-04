@@ -1,27 +1,14 @@
 import React from 'react'; 
-import {Link} from 'react-router-dom';
-import logo from './img/logo.png';
+import NavAfterLog from './NavAfterLog';
 
 function ChildForm(){
 
     return(
+      
 <div className="ChildFormContainer">
 
-<div className="Nav">
-    
-     <div className="logo">
-        <img src={logo} alt="logo" width="30px"/>
-    </div>
-                <Link to="/Register">Register</Link>
-                <Link to="/">Home Page</Link>
-                <Link to="Gigapet">Giga-Pet</Link>
-                <Link to="/MealForm">Meal Form</Link> 
-                <form>
-                    <input type="e-mail" placeholder="Enter e-mail here"/>
-                    <input type="password" placeholder="Enter password here"/>
-                    <button>Login</button>
-                </form>
-        </div>
+        <NavAfterLog /> 
+       
 
 <div className="ChildFormP">
     <p>

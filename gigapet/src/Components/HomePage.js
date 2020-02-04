@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios'
+import NavBeforeLog from './NavBeforeLog';
 
 function HomePage(props) {
 
@@ -33,21 +34,7 @@ function HomePage(props) {
 
     return (
         <div>
-            <div className="Login">
-                <form onSubmit={login}>
-                    <input type="e-mail" placeholder="Enter e-mail here" name="email" value={credentials.email} onChange={handleChange} />
-                    <input type="password" placeholder="Enter password here" name="password" value={credentials.password} onChange={handleChange} />
-                    <button>Login</button>
-                </form>
-                <Link to="/Register">Register</Link>
-                <Link to="/">Home Page</Link>
-                <Link to="Gigapet">Giga-Pet</Link>
-                <Link to="/MealForm">Meal Form</Link>
-                <Link to="/ChildForm"> Child Form</Link>
-            </div>
-
-
-
+           <NavBeforeLog /> 
         </div>
     )
 }
