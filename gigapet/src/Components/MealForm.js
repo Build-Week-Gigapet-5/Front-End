@@ -1,8 +1,16 @@
-import React from 'react';
+import React, {useState} from 'react';
 import NavAfterLog from './NavAfterLog';
 import MealCards from './MealCards';
+import axios from 'axios';
 
 function MealForm(){
+ const [category, setCategory] = useState([]);
+    axios
+
+        .get('https://gigapetfive.herokuapp.com/auth/food/categories')
+        .then(res =>{
+            setCategory(res.data);
+        })
 
     return(
 <div>
@@ -11,17 +19,13 @@ function MealForm(){
             <input type="string" placeholder="yyyy-mm-dd"/>
             <input type="number" placeholder="Enter Serving Size"></input>
             <select type="dropdown">
-                <option>Please choose an option</option>
-                <option category_id="1">Vegetables</option>
-                <option category_id="2">Fruits</option>
-                <option category_id="3">Protein</option>
-                <option category_id="4">Grains</option>              
-                <option category_id="5">Dairy</option>
-                <option category_id="6">Snacks</option> 
+                {category.map(item =>{
+                    return(<option  key={item.id} category_id={item.id}>{item.category_name}
+                    
+                    </option>)})}
             </select>
             <button>Submit</button>
-        </form>
-        <MealCards />
+            </form>
         </div>
     )
 }
