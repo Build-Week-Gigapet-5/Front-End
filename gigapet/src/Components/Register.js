@@ -11,7 +11,7 @@ import logo from './img/logo.png';
 
 function Register(){
  
-    const DropDown = styled.div`animation: 10s ${keyframes `${slideInDown}`} infinite`;
+    const DropDown = styled.div`animation: 10s ${keyframes `${slideInDown}`}`;
 
     return(
 

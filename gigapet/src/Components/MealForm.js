@@ -1,25 +1,14 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import NavAfterLog from './NavAfterLog';
+import MealCards from './MealCards';
 
 function MealForm(){
-    function formatDate(date) {
-        var dateForInput = new Date(date),
-            month = '' + (dateForInput.getMonth() + 1),
-            day = '' + dateForInput.getDate(),
-            year = dateForInput.getFullYear();
-    
-        if (month.length < 2) 
-            month = '0' + month;
-        if (day.length < 2) 
-            day = '0' + day;
-    
-        return [year, month, day].join('-');
-    }
+
     return(
 <div>
         <NavAfterLog />
         <form className="MealFormStyle">
-            <input className="test" type="date" min="01/01/2020" max={formatDate(new Date())}/>
+            <input type="string" placeholder="yyyy-mm-dd"/>
             <input type="number" placeholder="Enter Serving Size"></input>
             <select type="dropdown">
                 <option>Please choose an option</option>
@@ -32,6 +21,7 @@ function MealForm(){
             </select>
             <button>Submit</button>
         </form>
+        <MealCards />
         </div>
     )
 }
