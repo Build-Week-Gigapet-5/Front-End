@@ -15,11 +15,15 @@ useEffect(()=> {
     .catch(err=>{
         console.log("You've recieved", err);
     })
+}, [])
+
+useEffect(()=>{
     let answer = data.filter(item =>{
-        item.date.includes(inputv);
+        return item.date.includes(inputv);
         })
         setSearchAnswer(answer);
-}, [inputv])
+
+},[inputv])
         const Change = event => {
             setInput(event.target.value)
           }
