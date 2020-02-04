@@ -1,25 +1,10 @@
 import React from 'react';
 import NavAfterLog from './NavAfterLog';
-function MainPage(){
-    return(
-        <div>
-     <NavAfterLog />
-        </div>
-
-    )
 function MainPage() {
 	return (
 		<div>
-			<div>
-				<div className="Login">
-					<Link to="/">Home Page</Link>
-					<Link to="/Gigapet">Giga-Pet</Link>
-					<Link to="/MealForm">Meal Form</Link>
-					<Link to="/ChildForm"> Child Form</Link>
-				</div>
-			</div>
+			<NavAfterLog />
 		</div>
 	);
 }
-
 export default MainPage;
