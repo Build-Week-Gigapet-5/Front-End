@@ -1,28 +1,38 @@
 import React, { useEffect, useState } from 'react';
-import SS1 from './img/Servingsize1.png';
-import SS2 from './img/Servingsize2.png';
-import SS3 from './img/Servingsize3.png';
-import SS4 from './img/Servingsize4.png';
-import SS5 from './img/Servingsize5.png';
+import NavAfterLog from './NavAfterLog';
 
 function MealForm(){
-
-
+    function formatDate(date) {
+        var dateForInput = new Date(date),
+            month = '' + (dateForInput.getMonth() + 1),
+            day = '' + dateForInput.getDate(),
+            year = dateForInput.getFullYear();
+    
+        if (month.length < 2) 
+            month = '0' + month;
+        if (day.length < 2) 
+            day = '0' + day;
+    
+        return [year, month, day].join('-');
+    }
     return(
-
-
+<div>
+        <NavAfterLog />
         <form className="MealFormStyle">
-            <input type="date"/>
+            <input className="test" type="date" min="01/01/2020" max={formatDate(new Date())}/>
+            <input type="number" placeholder="Enter Serving Size"></input>
             <select type="dropdown">
-                <option value="protein">Protein</option>
-                <option value="fruits and veggies">Fruits and Vegetables</option>
-                <option value="grain">Grain</option>
-                <option value="snacks">Snacks</option> 
+                <option>Please choose an option</option>
+                <option category_id="1">Vegetables</option>
+                <option category_id="2">Fruits</option>
+                <option category_id="3">Protein</option>
+                <option category_id="4">Grains</option>              
+                <option category_id="5">Dairy</option>
+                <option category_id="6">Snacks</option> 
             </select>
-            <input Type="Qty" placeholder="Enter Serving Size"></input>
             <button>Submit</button>
         </form>
-
+        </div>
     )
 }
 

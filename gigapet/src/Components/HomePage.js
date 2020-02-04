@@ -43,8 +43,8 @@ function HomePage(props) {
                 <Link to="/">Home Page</Link>
                 <Link to="Gigapet">Giga-Pet</Link>
                 <Link to="/MealForm">Meal Form</Link>
+                <Link to="/ChildForm"> Child Form</Link>
             </div>
-
 
 
 
