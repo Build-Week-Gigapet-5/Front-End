@@ -1,9 +1,4 @@
-import React, { useEffect, useState } from 'react';
-import SS1 from './img/Servingsize1.png';
-import SS2 from './img/Servingsize2.png';
-import SS3 from './img/Servingsize3.png';
-import SS4 from './img/Servingsize4.png';
-import SS5 from './img/Servingsize5.png';
+import React from 'react';
 
 function MealForm(){
 
