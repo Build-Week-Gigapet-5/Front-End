@@ -1,6 +1,12 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import NavAfterLog from './NavAfterLog';
+function MainPage(){
+    return(
+        <div>
+     <NavAfterLog />
+        </div>
 
+    )
 function MainPage() {
 	return (
 		<div>

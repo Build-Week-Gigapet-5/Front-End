@@ -1,16 +1,18 @@
 import React, {useState} from 'react';
 import {slideInDown} from 'react-animations';
 import styled, { keyframes } from 'styled-components';
-import {Link} from 'react-router-dom';
+import NavBeforeLog from './NavBeforeLog';
 import Steak from './img/Steak.png';
-import Lettuce from './img/Lettuce.png';
 import Bread from './img/Bread.png';
 import Carrot from './img/Carrot.png';
 import Broccoli from './img/Broccoli.png';
 import logo from './img/logo.png';
 import axios from "axios"
 
+function Register(){
+  
 function Register(props){
+
  
     const DropDown = styled.div`animation: 10s ${keyframes `${slideInDown}`} infinite`;
 
@@ -46,6 +48,7 @@ console.log(registerCredentials)
         <div>
              <div>
         <div className="Login">
+        <NavBeforeLog />
                 <form>
                     <input type="e-mail" placeholder="Enter e-mail here"/>
                     <input type="password" placeholder="Enter password here"/>
@@ -66,11 +69,10 @@ console.log(registerCredentials)
         <img src={logo} alt="logo" width="300px"/>
     </div>
         <div className="DroppingDown">
-            <DropDown><img src={Steak} alt='Steak' width="250px"/></DropDown>
-            <DropDown><img src={Lettuce} alt='Lettuce'width="250px"/></DropDown>
-            <DropDown><img src={Bread} alt='Bread' width="250px"/></DropDown>
-            <DropDown><img src={Broccoli} alt='Broccoli' width="250px"/></DropDown>
-            <DropDown><img src={Carrot} alt='Carrot' width="250px"/></DropDown>
+            <DropDown><img className="tooBigAt1700px" src={Steak} alt='Steak' width="100px" postion="absolute"/></DropDown>
+            <DropDown><img className="tooBigAt1500px" src={Carrot} alt='Carrot' width="100px" postion="absolute"/></DropDown>
+            <DropDown><img className="tooBigAt1300px" src={Bread} alt='Bread' width="100px" postion="absolute"/></DropDown>
+            <DropDown><img className="tooBigAt1100px" src={Broccoli} alt='Broccoli' width="100px" postion="absolute"/></DropDown>
         </div>
 <form onSubmit={handleSubmit}>
     <div className="RegForm">

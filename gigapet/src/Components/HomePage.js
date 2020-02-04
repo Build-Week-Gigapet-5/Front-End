@@ -1,3 +1,11 @@
+
+import React from 'react';
+import NavBeforeLog from './NavBeforeLog';
+
+function HomePage(){
+return(
+    <div className="container">
+      <NavBeforeLog />
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios'
@@ -45,7 +53,6 @@ function HomePage(props) {
                 <Link to="/MealForm">Meal Form</Link>
                 <Link to="/ChildForm"> Child Form</Link>
             </div>
-
 
 
 
