@@ -139,12 +139,25 @@ body{
   align-items: center;
 }
 
-.Nav{
+.NavBeforeLogContainer{
+  width:100%;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: #FE5132;
+  display: flex;
+}
+
+.NavAfterLogContainer{
   width:100%;
   justify-content: space-evenly;
   background-color: #FE5132;
-  padding: 10px;
   display: flex;
+}
+
+.Login{
+  display: flex;
+  justify-content: space-evenly;
+
 }
 
 .ChildFormContainer{
@@ -154,7 +167,6 @@ body{
   flex-Wrap: wrap;
   align-content: center;
   justify-content: center;
-  background-color: #EDF5E1;
 }
 
 .ChildFormP{
