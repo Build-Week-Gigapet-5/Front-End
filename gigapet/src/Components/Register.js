@@ -9,8 +9,6 @@ import Broccoli from './img/Broccoli.png';
 import logo from './img/logo.png';
 import axios from "axios"
 
-function Register(){
-  
 function Register(props){
 
  
@@ -49,16 +47,6 @@ console.log(registerCredentials)
              <div>
         <div className="Login">
         <NavBeforeLog />
-                <form>
-                    <input type="e-mail" placeholder="Enter e-mail here"/>
-                    <input type="password" placeholder="Enter password here"/>
-                    <button>Login</button>
-                </form>
-                <Link to="/Register">Register</Link>
-                <Link to="/">Home Page</Link>
-                <Link to="Gigapet">Giga-Pet</Link>
-                <Link to="/MealForm">Meal Form</Link>
-                <Link to="/ChildForm"> Child Form</Link>
         </div>
 
 
