@@ -6,6 +6,7 @@ import MealForm from './Components/MealForm';
 import {Route} from 'react-router-dom';
 
 import './App.css';
+import ChildForm from './Components/ChildForms';
 
 function App() {
   return (
@@ -14,7 +15,7 @@ function App() {
     <Route exact path="/" component={HomePage} />
     <Route path="/Gigapet" component={MainPage} />
     <Route path="/MealForm" component={MealForm} />
- 
+    <Route path="/ChildForm" component={ChildForm} />
     </div>
   );
 }
