@@ -1,6 +1,6 @@
+
 import React, {useState} from 'react';
 import NavAfterLog from './NavAfterLog';
-import MealCards from './MealCards';
 import axios from 'axios';
 
 function MealForm(){
