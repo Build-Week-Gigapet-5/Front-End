@@ -10,10 +10,11 @@ import './App.css';
 function App() {
   return (
     <div>
-    <Route exact path="/Register" component={Register} />
+    <Route path="/Register" component={Register} />
     <Route exact path="/" component={HomePage} />
-    <Route exact path="/Gigapet" component={MainPage} />
-    <Route exact path="/MealForm" component={MealForm} />
+    <Route path="/Gigapet" component={MainPage} />
+    <Route path="/MealForm" component={MealForm} />
+ 
     </div>
   );
 }

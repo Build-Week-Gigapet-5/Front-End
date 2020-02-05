@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from "axios";
-import MealCards from "./MealCards";
 
-function DaysSearch(){
+function MonthsSearch(){
     const [data, setData] = useState([]);
     const [inputv, setInput] = useState("");
     const [searchAnswer, setSearchAnswer] = useState([]);
@@ -19,12 +18,12 @@ useEffect(()=> {
 }, [data])
             const Change = event => {
             setInput(event.target.value)
-            setSearchAnswer(data.filter(x =>{return (x.date.split(3,5) === inputv )}))
+            setSearchAnswer(data.filter(x =>x.date.split("-")[1] === inputv ))
             }
             return(
             <div>
 
-                <select onChange={Change} type="dropdown" placeholder="Pick a month">
+                <select onChange={Change} placeholder="Pick a month">
                 <option value="01">January</option>
                 <option value="02">February</option>
                 <option value="03">March</option>
@@ -56,4 +55,4 @@ useEffect(()=> {
             </div>
         )
 }
-export default DaysSearch;
+export default MonthsSearch;

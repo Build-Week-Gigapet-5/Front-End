@@ -12,7 +12,7 @@ axios
     })
     .catch(err => {
         console.log(err);
-    })},[data]);
+    })},[]);
 return(
     data.map(food =>{
         return(

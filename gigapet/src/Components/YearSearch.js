@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from "axios";
 
-function DaysSearch(){
+function YearSearch(){
     const [data, setData] = useState([]);
     const [inputv, setInput] = useState("");
     const [searchAnswer, setSearchAnswer] = useState([]);
@@ -14,21 +14,23 @@ useEffect(()=> {
     .catch(err=>{
         console.log("You've recieved", err);
     })
-}, [])
 
-useEffect(()=>{
-    let answer = data.filter(item =>{
-        return item.date.includes(inputv);
-        })
-        setSearchAnswer(answer);
-
-},[inputv])
-        const Change = event => {
+}, [data])
+            const Change = event => {
             setInput(event.target.value)
-          }
-        return(
+            setSearchAnswer(data.filter(x =>x.date.split("-")[0] === inputv ))
+            }
+            return(
             <div>
-            <input onChange={Change} type="string" placeholder="YYYY-MM-DD" value={inputv} />
+
+                <select onChange={Change} placeholder="Pick a year">
+                <option value="2015">2015</option>
+                <option value="2016">2016</option>
+                <option value="2017">2017</option>
+                <option value="2018">2018</option>
+                <option value="2019">2019</option>
+                <option value="2020">2020</option>             
+            </select>
             {searchAnswer.map(food =>{
                 return(
                     <div className="FoodForm">
@@ -47,4 +49,4 @@ useEffect(()=>{
             </div>
         )
 }
-export default DaysSearch;
+export default YearSearch;
