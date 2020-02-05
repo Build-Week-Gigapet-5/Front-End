@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios'
@@ -37,6 +38,7 @@ function HomePage(props) {
            <NavBeforeLog /> 
         </div>
     )
+
 }
 
 export default HomePage;
