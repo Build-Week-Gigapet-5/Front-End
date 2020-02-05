@@ -37,6 +37,5 @@ function HomePage(props) {
            <NavBeforeLog /> 
         </div>
     )
-}
-
+    }
 export default HomePage;
