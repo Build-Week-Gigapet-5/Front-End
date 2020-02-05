@@ -1,6 +1,5 @@
 import React from 'react';
 import NavAfterLog from './NavAfterLog';
-
 import MealCards from './MealCards';
 import DaysSearch from './DaysSearch';
 import MonthsSearch from './MonthsSearch';
@@ -20,6 +19,4 @@ function MainPage(){
 }
 
 export default MainPage;
-
-
 

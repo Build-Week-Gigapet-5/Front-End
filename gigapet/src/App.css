@@ -134,14 +134,7 @@ body{
       align-items:flex-end;
       flex-direction: column;
     }
-
   }
-
- 
-
-  align-items: center;
-}
-
 .NavBeforeLogContainer{
   width:100%;
   align-items: center;

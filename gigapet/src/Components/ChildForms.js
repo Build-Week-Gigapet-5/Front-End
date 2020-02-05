@@ -1,4 +1,9 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
 
+>>>>>>> 98ebc6ec89f943a4789c3dea1521715c559d7e78
 import React from 'react'; 
 import NavAfterLog from './NavAfterLog';
 
@@ -28,4 +33,8 @@ function ChildForm(){
 }
 
 export default ChildForm;
+<<<<<<< HEAD
+>>>>>>> 14dea601d9501bec7320fef36000be2edb2fdc8e
+=======
 
+>>>>>>> 98ebc6ec89f943a4789c3dea1521715c559d7e78
