@@ -8,7 +8,6 @@ import Carrot from './img/Carrot.png';
 import Broccoli from './img/Broccoli.png';
 import logo from './img/logo.png';
 
-
 function Register(){
  
     const DropDown = styled.div`animation: 10s ${keyframes `${slideInDown}`}`;

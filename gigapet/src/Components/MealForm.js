@@ -1,7 +1,12 @@
+
 import React, {useState} from 'react';
 import NavAfterLog from './NavAfterLog';
 import MealCards from './MealCards';
 import axios from 'axios';
+
+import React, { useEffect, useState } from 'react';
+import NavAfterLog from './NavAfterLog';
+
 
 function MealForm(){
  const [category, setCategory] = useState([]);
