@@ -15,7 +15,7 @@ useEffect(()=> {
         console.log("You've recieved", err);
     })
 
-}, [data])
+}, [])
             const Change = event => {
             setInput(event.target.value)
             setSearchAnswer(data.filter(x =>x.date.split("-")[0] === inputv ))
@@ -24,6 +24,7 @@ useEffect(()=> {
             <div>
 
                 <select onChange={Change} placeholder="Pick a year">
+                <option value="2014">2015</option>
                 <option value="2015">2016</option>
                 <option value="2016">2017</option>
                 <option value="2017">2018</option>

@@ -15,7 +15,7 @@ useEffect(()=> {
         console.log("You've recieved", err);
     })
 
-}, [data])
+}, [])
             const Change = event => {
             setInput(event.target.value)
             setSearchAnswer(data.filter(x =>x.date.split("-")[1] === inputv ))
