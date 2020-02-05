@@ -22,6 +22,7 @@ return(
             <h2>{food.qty}</h2>
             <h2>{food.date}</h2>
             <h3>{food.category_id}</h3>
+            <button>Edit</button>
             <button>Delete</button>
         </div>
     </div>
