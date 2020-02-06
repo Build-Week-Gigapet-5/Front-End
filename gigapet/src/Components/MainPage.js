@@ -3,7 +3,6 @@ import NavAfterLog from './NavAfterLog';
 import MealCards from './MealCards';
 import DaysSearch from './DaysSearch';
 import MonthsSearch from './MonthsSearch';
-import YearSearch from './WeeklySearch';
 
 function MainPage(){
     return(
@@ -11,7 +10,6 @@ function MainPage(){
      <NavAfterLog />
      <DaysSearch />
      <MonthsSearch />
-     <YearSearch />
      <MealCards />
         </div>
 
