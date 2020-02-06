@@ -85,7 +85,7 @@ useEffect(()=> {
                     <div key= {food.id}>
                         <h1>{food.food_name}</h1>
                         <h2>{food.qty}</h2>
-                        <h2>{food.date}</h2>
+                        <h2>{food.date.split("T")[0]}</h2>
                         <h3>{food.category_id}</h3>
                         <button>Edit</button>
                         <button>Delete</button>
