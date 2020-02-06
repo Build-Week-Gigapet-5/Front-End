@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom'
+import { Link, withRouter } from 'react-router-dom'
 import { logo } from './img/logo.png';
 import axios from "axios"
 
@@ -30,7 +30,7 @@ function NavBeforeLog(props) {
 					email: "",
 					password: ""
 				})
-				// props.history.push('/');
+				props.history.push('/Gigapet');
 				console.log("response =", res.data)
 			})
 			.catch(err => console.log("Error:", err))
@@ -61,4 +61,4 @@ function NavBeforeLog(props) {
 	);
 }
 
-export default NavBeforeLog;
+export default withRouter(NavBeforeLog);

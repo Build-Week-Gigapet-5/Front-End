@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Children } from 'react';
 import NavAfterLog from './NavAfterLog';
 import MealCards from './MealCards';
 import DaysSearch from './DaysSearch';
@@ -13,6 +13,7 @@ function MainPage(){
      <MonthsSearch />
      <YearSearch />
      <MealCards />
+     {/* <Children /> */}
         </div>
 
     )
