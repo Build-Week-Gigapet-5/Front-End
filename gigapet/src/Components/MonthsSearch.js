@@ -18,27 +18,67 @@ useEffect(()=> {
     })
 
 }, [])
-            const Change = event => {
-            setInput(event.target.value)
-            setSearchAnswer(data.filter(x =>x.date.split("-")[1] === inputv ))
+
+            const ChangeTxt = (event) =>{
+                setInput(event.target.value)
             }
-            return(
+
+            function Change(event){
+            event.preventDefault();
+ 
+           switch(inputv){
+               case "January":
+                 setInput("01");
+                 break;
+               case "February":
+                setInput("02");
+                 break;
+               case "March":
+                setInput("03");
+                 break;
+               case "April":
+                setInput("04");
+                 break;
+               case "May":            
+               setInput("05");
+                 break;
+               case "June":
+                setInput("06");
+                 break;
+               case "July":
+                setInput("07");
+                 break;
+               case "August":
+                setInput("08");
+                 break;
+               case "September":
+                setInput("09");
+                 break;
+               case "October":
+                setInput("10");
+                 break;
+               case "November":
+                setInput("11");
+                 break;
+               case "December":
+                setInput("12");
+                 break;
+               default:
+                  break;
+           }
+            let result = data.filter(x =>{return(x.date.split("-")[1] === inputv)});
+            setSearchAnswer(result)
+           }    
+                
+        console.log("this is", searchAnswer);
+            return (
             <div>
 
-                <select onChange={Change} placeholder="Pick a month">
-                <option value="01">January</option>
-                <option value="02">February</option>
-                <option value="03">March</option>
-                <option value="04">April</option>
-                <option value="05">May</option>
-                <option value="06">June</option>
-                <option value="07">July</option>
-                <option value="08">August</option>
-                <option value="09">September</option>               
-                <option value="10">October</option>
-                <option value="11">November</option>
-                <option value="12">December</option>             
-            </select>
+
+                <form>
+                <input onChange={ChangeTxt} type="text" placeholder="Enter a Month Ex: January" value={inputv}/> 
+                <button onClick={Change} type='submit'>Submit</button>
+                </form>      
             {searchAnswer.map(food =>{
                 return(
                     <div className="FoodForm">
