@@ -4,7 +4,7 @@ import axios from "axios";
 function YearSearch(){
     const [data, setData] = useState([]);
     const [inputv, setInput] = useState("");
-    const [searchAnswer, setSearchAnswer] = useState([]);
+    const [searchAnswer, setSearchAnswer] = useState([""]);
 useEffect(()=> {
     axios
     .get('https://gigapetfive.herokuapp.com/auth/children/1/food')
@@ -16,21 +16,25 @@ useEffect(()=> {
     })
 
 }, [])
-            const Change = event => {
-            setInput(event.target.value)
-            setSearchAnswer(data.filter(x =>x.date.split("-")[0] === inputv ))
+
+
+            const ChangeTxt = (event) =>{
+                setInput(event.target.value)
+                console.log(searchAnswer)
             }
+
+            function Change(event) {
+            event.prevent.default();
+            let result = data.filter(x =>{
+            return x.date.split("-")[0].includes(inputv)})
+            setSearchAnswer(result)
+        }
             return(
             <div>
-
-                <select onChange={Change} placeholder="Pick a year">
-                <option value="2014">2015</option>
-                <option value="2015">2016</option>
-                <option value="2016">2017</option>
-                <option value="2017">2018</option>
-                <option value="2018">2019</option>
-                <option value="2019">2020</option>            
-            </select>
+                <form>
+                <input onChange={ChangeTxt} type="text" placeholder="Enter a year" value={inputv} />
+                <button onSubmit={Change}>Submit</button>
+                </form>
             {searchAnswer.map(food =>{
                 return(
                     <div className="FoodForm">
