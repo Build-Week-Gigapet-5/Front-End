@@ -3,7 +3,7 @@ import NavAfterLog from './NavAfterLog';
 import MealCards from './MealCards';
 import DaysSearch from './DaysSearch';
 import MonthsSearch from './MonthsSearch';
-import YearSearch from './YearSearch';
+import YearSearch from './WeeklySearch';
 
 function MainPage(){
     return(

@@ -4,10 +4,10 @@ import axios from "axios";
 function MonthsSearch(){
     const [data, setData] = useState([]);
     const [inputv, setInput] = useState("");
-    const [searchAnswer, setSearchAnswer] = useState([""]);
+    const [searchAnswer, setSearchAnswer] = useState([]);
 useEffect(()=> {
     axios
-    .get('https://gigapetfive.herokuapp.com/auth/children/1/food')
+    .get('https://gigapetfive.herokuapp.com/auth/children/3/food')
     .then(res=>{
         setData(res.data);
     })
@@ -16,73 +16,58 @@ useEffect(()=> {
     })
 
 }, [])
-            const ChangeTxt = event =>{
+
+            const ChangeTxt = (event) =>{
                 setInput(event.target.value)
             }
+
             function Change(event){
-            event.prevent.default();
-            let result = data.filter(x =>x.date.split("-")[1] === month);
-            setSearchAnswer(result)
-            let month = "";
-
-            const monthObject ={
-                January: "01",
-                February: "02",
-                March: "03",
-                April: "04",
-                May: "05",
-                June: "06",
-                July: "07",
-                August: "08",
-                September: "09",
-                October: "10",
-                November: "11",
-                December: "12"
-            }
-
+            event.preventDefault();
+ 
            switch(inputv){
                case "January":
-                 month = monthObject.January;
+                 setInput("01");
                  break;
                case "February":
-                 month = monthObject.February;
+                setInput("02");
                  break;
                case "March":
-                 month = monthObject.March;
+                setInput("03");
                  break;
                case "April":
-                 month = monthObject.April;
+                setInput("04");
                  break;
                case "May":            
-                 month = monthObject.May;
+               setInput("05");
                  break;
                case "June":
-                 month = monthObject.June;
+                setInput("06");
                  break;
                case "July":
-                 month = monthObject.July;
+                setInput("07");
                  break;
                case "August":
-                 month = monthObject.August;
+                setInput("08");
                  break;
                case "September":
-                 month = monthObject.September;
+                setInput("09");
                  break;
                case "October":
-                 month = monthObject.October;
+                setInput("10");
                  break;
                case "November":
-                 month = monthObject.November;
+                setInput("11");
                  break;
                case "December":
-                 month = monthObject.December;
+                setInput("12");
                  break;
                default:
-                   month = "";
+                  break;
+           }
+            let result = data.filter(x =>{return(x.date.split("-")[1] === inputv)});
+            setSearchAnswer(result)
            }    
                 
-
-        }
         console.log("this is", searchAnswer);
             return (
             <div>
@@ -90,7 +75,7 @@ useEffect(()=> {
 
                 <form>
                 <input onChange={ChangeTxt} type="text" placeholder="Enter a Month Ex: January" value={inputv}/> 
-                <button onSubmit={Change} type='submit'>Submit</button>
+                <button onClick={Change} type='submit'>Submit</button>
                 </form>      
             {searchAnswer.map(food =>{
                 return(
