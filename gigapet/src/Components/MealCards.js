@@ -6,7 +6,9 @@ function MealCards(){
 const [data, setData] = useState([]);
 useEffect(()=> {
 axios
-    .get(`https://gigapetfive.herokuapp.com/auth/children/1/food`)
+    .get(`https://gigapetfive.herokuapp.com/auth/children/1/food`, {
+        headers: { Authorization: localStorage.getItem("token") }
+    })
     .then(res => {
         setData(res.data);
     })
