@@ -4,6 +4,7 @@ import axios from "axios";
 function MonthsSearch(){
     const [data, setData] = useState([]);
     const [inputv, setInput] = useState("");
+    const [month, setMonth] = useState("")
     const [searchAnswer, setSearchAnswer] = useState([]);
 useEffect(()=> {
     axios
@@ -28,45 +29,45 @@ useEffect(()=> {
  
            switch(inputv){
                case "January":
-                 setInput("01");
+                 setMonth("01");
                  break;
                case "February":
-                setInput("02");
+                setMonth("02");
                  break;
                case "March":
-                setInput("03");
+                setMonth("03");
                  break;
                case "April":
-                setInput("04");
+                setMonth("04");
                  break;
                case "May":            
-               setInput("05");
+               setMonth("05");
                  break;
                case "June":
-                setInput("06");
+                setMonth("06");
                  break;
                case "July":
-                setInput("07");
+                setMonth("07");
                  break;
                case "August":
-                setInput("08");
+                setMonth("08");
                  break;
                case "September":
-                setInput("09");
+                setMonth("09");
                  break;
                case "October":
-                setInput("10");
+                setMonth("10");
                  break;
                case "November":
-                setInput("11");
+                setMonth("11");
                  break;
                case "December":
-                setInput("12");
+                setMonth("12");
                  break;
                default:
                   break;
            }
-            let result = data.filter(x =>{return(x.date.split("-")[1] === inputv)});
+            let result = data.filter(x =>{return(x.date.split("-")[1] === month)});
             setSearchAnswer(result)
            }    
                 

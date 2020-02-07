@@ -44,14 +44,8 @@ function NavBeforeLog(props) {
 			<Link to="/Gigapet">Giga-Pet</Link>
 			<Link to="/MealForm">Meal Form</Link>
 			<Link to="/ChildForm">Child Form</Link>
-			<div className="logo">
-				<img src={logo} alt="logo" />
-			</div>
 			<div className="Login">
 				<form onSubmit={login}>
-					<div className="logo">
-						<img src={logo} alt="logo" />
-					</div>
 					<input type="e-mail" placeholder="Enter e-mail here" name="email" value={credentials.email} onChange={handleChange} />
 					<input type="password" placeholder="Enter password here" name="password" value={credentials.password} onChange={handleChange} />
 					<button>Login</button>
