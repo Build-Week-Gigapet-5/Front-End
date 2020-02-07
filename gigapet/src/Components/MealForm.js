@@ -66,10 +66,10 @@ function MealForm() {
         <div>
             <NavAfterLog />
             <form className="MealFormStyle" onSubmit={addFood}>
-                <input type="text" placeholder="Name" name="food_name" value={foodData.food_name} onChange={handleChange}></input>
-                <input type="string" placeholder="yyyy-mm-dd" name="date" value={foodData.date} onChange={handleChange} />
-                <input type="number" placeholder="Enter Serving Size" name="qty" value={foodData.qty} onChange={handleChange}></input>
-                <input type="number" placeholder="Enter Category Number" name="category_id" value={foodData.category_id} onChange={handleChange}></input>
+                <p>Name:</p><input type="text" placeholder="Name" name="food_name" value={foodData.food_name} onChange={handleChange}></input>
+                <p>Year:</p><input type="string" placeholder="yyyy-mm-dd" name="date" value={foodData.date} onChange={handleChange} />
+                <p>Serving Size:</p><input type="number" placeholder="Enter Serving Size" name="qty" value={foodData.qty} onChange={handleChange}></input>
+                <p>Category:</p><input type="number" placeholder="Enter Category Number" name="category_id" value={foodData.category_id} onChange={handleChange}></input>
                 <button>Submit</button>
                 {category.map(item => {
                     return (<LegendKey key={item.id} category_id={item.id} name="category_id" value={foodData.category_id} onChange={handleChange}>{item.id} = {item.category_name}
