@@ -34,7 +34,7 @@ function Register(props){
       .post('https://gigapetfive.herokuapp.com/auth/register', registerCredentials)
       .then(res => {
           console.log(res)
-          props.history.replace('/')
+          props.history.replace('/Gigapet')
       })
       .catch(error => console.log(error))
     }

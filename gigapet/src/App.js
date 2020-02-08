@@ -5,6 +5,7 @@ import MainPage from './Components/MainPage';
 import MealForm from './Components/MealForm';
 import Children from "../src/Components/Children"
 import ProtectedRoute from "../src/Components/ProtectedRoute"
+import MealCard from '../src/Components//MealCard'
 import {Route} from 'react-router-dom';
 
 import './App.css';
@@ -19,6 +20,9 @@ function App() {
     <Route path="/MealForm" component={MealForm} />
     <Route path="/ChildForm" component={ChildForm} />
     <Route path="/Children" component={Children} />
+    <Route path="/mealcard/:id" render={props => (
+          <MealCard {...props}/>
+        )}  />
     </div>
   );
 }
