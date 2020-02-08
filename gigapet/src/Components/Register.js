@@ -42,15 +42,9 @@ function Register(props){
     return(
 
         <div>
-             <div>
         <div className="Login">
         <NavBeforeLog />
         </div>
-
-
-
-
-    </div>
     <div className="logo">
         <img src={logo} alt="logo" width="300px"/>
     </div>
