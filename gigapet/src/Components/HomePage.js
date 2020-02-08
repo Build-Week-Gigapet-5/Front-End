@@ -4,7 +4,7 @@ import axios from 'axios';
 import NavBeforeLog from './NavBeforeLog';
 import popTheBunny from './img/popTheBunny.png';
 import popThePuppy from './img/popThePuppy.png';
-import popTheKitty from './img/popTheKitty'
+import popTheKitty from './img/popTheKitty.png';
 
 function HomePage(props) {
 
@@ -13,9 +13,9 @@ function HomePage(props) {
     return (
         <div>
            <NavBeforeLog /> 
-           {popTheBunny}
-           {popTheKitty}
-           {popThePuppy}
+           <img src={popTheBunny} width="300px"/>
+           <img src={popTheKitty} width="300px"/>
+           <img src={popThePuppy} width="300px"/>
         </div>
     )
     }
